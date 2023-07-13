@@ -20,7 +20,6 @@ module.exports = (eleventyConfig) => {
       input: 'docs',
       includes: '_includes',
       data: '_data',
-      output: 'dist',
     },
   }
 }

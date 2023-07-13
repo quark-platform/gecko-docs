@@ -1,0 +1,4 @@
+layout: esm.md
+tags: [esm]
+source: toolkit/modules/Sqlite.sys.mjs
+url: resource://gre/modules/Sqlite.sys.mjs

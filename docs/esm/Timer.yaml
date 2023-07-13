@@ -1,3 +1,4 @@
+layout: esm.md
 tags: [esm]
 source: toolkit/modules/Timer.sys.mjs
 url: resource://gre/modules/Timer.sys.mjs
