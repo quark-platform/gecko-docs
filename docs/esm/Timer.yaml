@@ -5,7 +5,7 @@ url: resource://gre/modules/Timer.sys.mjs
 
 exports:
   - name: setTimeout
-    type: function
+    kind: function
     description: |
       Waits for a period of time asynchronously before calling the attached
       callback
@@ -29,7 +29,7 @@ exports:
         An ID that can be used to cancel the timeout if it has not completed
 
   - name: setTimeoutWithTarget
-    type: function
+    kind: function
     description: |
       Similar to set timeout except you can specify an event type.
 
@@ -57,7 +57,7 @@ exports:
         An ID that can be used to cancel the timeout if it has not completed
 
   - name: clearTimeout
-    type: function
+    kind: function
     description: Cancels a timeout
 
     args:
@@ -66,7 +66,7 @@ exports:
         description: The id of the timeout to cancel
 
   - name: setInterval
-    type: function
+    kind: function
     description: |
       Runs a callback every x period of time
 
@@ -89,7 +89,7 @@ exports:
         An ID that can be used to cancel the interval
 
   - name: setIntervalWithTarget
-    type: function
+    kind: function
     description: |
       Runs a callback every x period of time, with a specified event type
 
@@ -117,7 +117,7 @@ exports:
         An ID that can be used to cancel the interval
 
   - name: clearInterval
-    type: function
+    kind: function
     description: Cancels a interval
 
     args:
@@ -126,7 +126,7 @@ exports:
         description: The id of the interval to cancel
 
   - name: requestIdleCallback
-    type: function
+    kind: function
     description: |
       Register a callback to run when the browser is idle
 
@@ -144,7 +144,7 @@ exports:
       description: The id of the return
 
   - name: cancelIdleCallback
-    type: function
+    kind: function
     description: Cancel an existing idle callback
 
     args:

@@ -14,6 +14,11 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy('docs/css')
 
+  eleventyConfig.addFilter('remod', (value, namespace) => ({
+    ...value,
+    name: `${namespace}.${value.name}`,
+  }))
+
   return {
     passthroughFileCopy: true,
     dir: {

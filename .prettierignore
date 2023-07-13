@@ -1,2 +1,2 @@
-docs/_includes/*.md
+docs/_includes/**/*.md
 docs/esm.md
