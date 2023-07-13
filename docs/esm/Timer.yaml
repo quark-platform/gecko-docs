@@ -1,0 +1,151 @@
+tags: [esm]
+source: toolkit/modules/Timer.sys.mjs
+url: resource://gre/modules/Timer.sys.mjs
+
+exports:
+  - name: setTimeout
+    type: function
+    description: |
+      Waits for a period of time asynchronously before calling the attached
+      callback
+
+    generics: [Args]
+
+    args:
+      - name: aCallback
+        type: '(...args: Args) => void'
+        description: The callback to be called when the timeout has completed
+      - name: aMilliseconds
+        type: number
+        description: The length of the timeout in milliseconds
+      - name: ...aArgs
+        type: Args
+        description: The arguments to be passed into the callback
+
+    returns:
+      type: number
+      description: |
+        An ID that can be used to cancel the timeout if it has not completed
+
+  - name: setTimeoutWithTarget
+    type: function
+    description: |
+      Similar to set timeout except you can specify an event type.
+
+    generics: [Args]
+
+    args:
+      - name: aCallback
+        type: '(...args: Args) => void'
+        description: The callback to be called when the timeout has completed
+      - name: aMilliseconds
+        type: number
+        description: The length of the timeout in milliseconds
+      - name: aTarget
+        type: number
+        description: |
+          Specifies some optimization details used internally. For more info see
+          `nsIEventTarget`
+      - name: ...aArgs
+        type: Args
+        description: The arguments to be passed into the callback
+
+    returns:
+      type: number
+      description: |
+        An ID that can be used to cancel the timeout if it has not completed
+
+  - name: clearTimeout
+    type: function
+    description: Cancels a timeout
+
+    args:
+      - name: id
+        type: number
+        description: The id of the timeout to cancel
+
+  - name: setInterval
+    type: function
+    description: |
+      Runs a callback every x period of time
+
+    generics: [Args]
+
+    args:
+      - name: aCallback
+        type: '(...args: Args) => void'
+        description: The callback to be called each interval
+      - name: aMilliseconds
+        type: number
+        description: The number of milliseconds between executions
+      - name: ...aArgs
+        type: Args
+        description: The arguments to be passed into the callback
+
+    returns:
+      type: number
+      description: |
+        An ID that can be used to cancel the interval
+
+  - name: setIntervalWithTarget
+    type: function
+    description: |
+      Runs a callback every x period of time, with a specified event type
+
+    generics: [Args]
+
+    args:
+      - name: aCallback
+        type: '(...args: Args) => void'
+        description: The callback to be called each interval
+      - name: aMilliseconds
+        type: number
+        description: The number of milliseconds between executions
+      - name: aTarget
+        type: number
+        description: |
+          Specifies some optimization details used internally. For more info see
+          `nsIEventTarget`
+      - name: ...aArgs
+        type: Args
+        description: The arguments to be passed into the callback
+
+    returns:
+      type: number
+      description: |
+        An ID that can be used to cancel the interval
+
+  - name: clearInterval
+    type: function
+    description: Cancels a interval
+
+    args:
+      - name: id
+        type: number
+        description: The id of the interval to cancel
+
+  - name: requestIdleCallback
+    type: function
+    description: |
+      Register a callback to run when the browser is idle
+
+    args:
+      - name: aCallback
+        type: '() => void'
+      - name: aOptions
+        type: '{ timeout?: number } | undefined'
+        description: |
+          Some optional config parameters:
+           - `timeout`: The maximum amount of time between the event call & callback
+
+    returns:
+      type: number
+      description: The id of the return
+
+  - name: cancelIdleCallback
+    type: function
+    description: Cancel an existing idle callback
+
+    args:
+      - name: aId
+        type: number

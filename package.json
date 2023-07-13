@@ -1,0 +1,19 @@
+{
+  "name": "gecko-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
+    "js-yaml": "^4.1.0"
+  }
+}
